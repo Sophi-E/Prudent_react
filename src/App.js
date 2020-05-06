@@ -73,7 +73,7 @@ const App = () => {
               </li>
               <li className='nav__desktop-item'>
                 <a
-                  href='https://github.com/vickOnRails/Prudent'
+                  href='https://github.com/Sophi-E/Prudent_react'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='btn btn-secondary nav__desktop-link'
@@ -105,7 +105,7 @@ const App = () => {
               </li>
               <li className='nav__mobiile-item'>
                 <a
-                  href='https://github.com/vickOnRails/Prudent'
+                  href='https://github.com/Sophi-E/Prudent_react'
                   targe='_blank'
                   rel='noopener noreferrer'
                   className='nav__mobile-link'
@@ -144,7 +144,7 @@ const App = () => {
                 App Store
               </a>
               <a
-                href='https://github.com/vickOnRails/Prudent'
+                href='https://github.com/Sophi-E/Prudent_react'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='btn btn-secondary'
@@ -162,7 +162,7 @@ const App = () => {
               <img
                 loading='lazy'
                 src='./imgs/header-ui-desktop.png'
-                alt='Mobile Image'
+                alt='Mobile ui'
                 className='img-screen-ui'
               />
             </picture>
@@ -196,7 +196,7 @@ const App = () => {
                 <img
                   loading='lazy'
                   src='./imgs/speed-ui-desktop.png'
-                  alt='Mobile Image'
+                  alt='Mobile ui'
                 />
               </picture>
             </div>
@@ -230,7 +230,7 @@ const App = () => {
                 <img
                   loading='lazy'
                   src='./imgs/privacy-ui-desktop.png'
-                  alt='Mobile Image'
+                  alt='Mobile ui'
                   width='100%'
                 />
               </picture>
