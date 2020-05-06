@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import AOS from 'aos';
 
 function App() {
+  const hamburger = document.querySelector('.nav__hamburger');
+  const body = document.querySelector('body');
+  const mobileNavigation = document.querySelector('.nav__mobile-nav');
+
+  //console.log(body);
+
+  useEffect(() => {
+    AOS.init();
+  });
+
+  const toggleMobileNav = (e) => {
+    body.classList.toggle('mobile-nav-open');
+  };
+  hamburger.addEventListener('click', toggleMobileNav);
+
   return (
     <div className='App'>
       <nav className='nav'>
