@@ -2,22 +2,38 @@ import React, { useEffect } from 'react';
 import './App.css';
 import AOS from 'aos';
 
-function App() {
-  const hamburger = document.querySelector('.nav__hamburger');
+const App = () => {
   const body = document.querySelector('body');
-  const mobileNavigation = document.querySelector('.nav__mobile-nav');
-
-  //console.log(body);
 
   useEffect(() => {
     AOS.init();
-  });
+  }, []);
 
-  const toggleMobileNav = (e) => {
+  const toggleMobileNav = () => {
     body.classList.toggle('mobile-nav-open');
   };
-  hamburger.addEventListener('click', toggleMobileNav);
+  const isModalOpen = () => {
+    return body.classList.contains('mobile-nav-open') ? true : false;
+  };
+  const closeMobileMenu = (e) => {
+    console.log(
+      e.target.classList.contains('nav__mobile-item') ||
+        e.target.classList.contains('nav__hamburger') ||
+        e.target.classList.contains('nav__container')
+    );
+    if (
+      isModalOpen() &&
+      (e.target.classList.contains('nav__mobiile-item') ||
+        e.target.classList.contains('nav__hamburger'))
+    )
+      return;
 
+    body.classList.remove('mobile-nav-open');
+  };
+
+  window.addEventListener('click', closeMobileMenu);
+  //hamburger.addEventListener('click', toggleMobileNav);
+  console.log(window);
   return (
     <div className='App'>
       <nav className='nav'>
@@ -39,7 +55,11 @@ function App() {
             </a>
           </div>
           <div className='nav__right'>
-            <button className='nav__hamburger' aria-label='Menu'></button>
+            <button
+              className='nav__hamburger'
+              aria-label='Menu'
+              onClick={toggleMobileNav}
+            ></button>
             <ul className='nav__nav-desktop'>
               <li className='nav__desktop-item'>
                 <a href='#' className='nav__desktop-link'>
@@ -609,6 +629,6 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 export default App;
