@@ -491,7 +491,7 @@ const App = () => {
                 App Store
               </a>
               <a
-                href='https://github.com/vickOnRails/Prudent'
+                href='https://github.com/Sophi-E/Prudent_react/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='btn btn-secondary'
