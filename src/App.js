@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import AOS from 'aos';
+import headerDesktop from './imgs/header-ui-desktop.png';
+import headerMobile from './imgs/header-ui-mobile.png';
+import privacyDesktop from './imgs/privacy-ui-mobile.png';
+import privacyMobile from './imgs/privacy-ui-mobile.png';
+import speedDesktop from './imgs/speed-ui-mobile.png';
+import speedMobile from './imgs/speed-ui-mobile.png';
 
 const App = () => {
   const body = document.querySelector('body');
@@ -155,13 +161,10 @@ const App = () => {
           </div>
           <div className='header__img'>
             <picture>
-              <source
-                media='(max-width: 560px)'
-                srcSet='./imgs/header-ui-mobile.png'
-              />
+              <source media='(max-width: 560px)' srcSet={headerMobile} />
               <img
                 loading='lazy'
-                src='./imgs/header-ui-desktop.png'
+                src={headerDesktop}
                 alt='Mobile ui'
                 className='img-screen-ui'
               />
@@ -189,15 +192,8 @@ const App = () => {
             </div>
             <div className='section__img'>
               <picture>
-                <source
-                  media='(max-width : 560px)'
-                  srcSet='./imgs/speed-ui-mobile.png'
-                />
-                <img
-                  loading='lazy'
-                  src='./imgs/speed-ui-desktop.png'
-                  alt='Mobile ui'
-                />
+                <source media='(max-width : 560px)' srcSet={speedMobile} />
+                <img loading='lazy' src={speedDesktop} alt='Mobile ui' />
               </picture>
             </div>
           </div>
@@ -223,13 +219,10 @@ const App = () => {
             </div>
             <div className='section__img'>
               <picture>
-                <source
-                  media='(max-width : 560px)'
-                  srcSet='./imgs/privacy-ui-mobile.png'
-                />
+                <source media='(max-width : 560px)' srcSet={privacyMobile} />
                 <img
                   loading='lazy'
-                  src='./imgs/privacy-ui-desktop.png'
+                  src={privacyDesktop}
                   alt='Mobile ui'
                   width='100%'
                 />
