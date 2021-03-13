@@ -1,7 +1,5 @@
 # Prudent
 
-This project was built upon (https://github.com/vickOnRails/Prudent).
-
 Beautiful, Fast landing page template for your next react project
 
 ## Features
